@@ -390,12 +390,12 @@ def main(args):
     wait_for_condition(condition=condition, condition_args=[proxy_node, args.pulsar_cluster_name,
                                                             '{}/bin/pulsar-admin clusters list'.format(PULSAR_HOME)])
 
-    logger.info('Pulsar cluster (%s) can be reached on docker network (%s):\n%s \n%s',
+    logger.info('Pulsar cluster (%s) can be reached on container network (%s):\n%s \n%s',
                 args.pulsar_cluster_name, cluster.network,
                 textwrap.indent('Web service URL: {}'.format(web_service_url), prefix='    '),
                 textwrap.indent('Broker service URL: {}'.format(broker_service_url), prefix='    '))
     logger.log(logging.INFO if args.tls else -1,
-               'Pulsar cluster (%s) can be reached securely on docker network (%s):\n%s \n%s',
+               'Pulsar cluster (%s) can be reached securely on container network (%s):\n%s \n%s',
                args.pulsar_cluster_name, cluster.network,
                textwrap.indent('Secure web service URL: {}'.format(web_service_url_tls), prefix='    '),
                textwrap.indent('Secure broker service URL: {}'.format(broker_service_url_tls), prefix='    '))

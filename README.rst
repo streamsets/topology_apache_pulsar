@@ -47,7 +47,7 @@ To see full usage instructions for the ``start`` action, use ``-h``/``--help``:
                             Cluster name to use (default: None)
       --namespace ns        Namespace to use when looking for images (default:
                             None)
-      -n nw, --network nw   Docker network to use (default: cluster)
+      -n nw, --network nw   Container network to use (default: cluster)
       -o sys, --operating-system sys
                             Operating system to use for cluster nodes (default:
                             None)
@@ -57,7 +57,7 @@ To see full usage instructions for the ``start`` action, use ``-h``/``--help``:
                             Argument may be used more than once for multiple
                             ports. (default: None)
       -r url, --registry url
-                            Docker Registry from which to pull images (default:
+                            Image Registry from which to pull images (default:
                             docker.io)
       -h, --help            show this help message and exit
 
